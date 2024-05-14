@@ -3,4 +3,4 @@ roman-number,it.unipd.mtss,NumberBelowZeroException,0,4,0,0,0,2,0,1,0,1
 roman-number,it.unipd.mtss,IntegerToRoman,3,151,0,8,1,11,1,6,1,2
 roman-number,it.unipd.mtss,NumberOverOneThousand,0,4,0,0,0,2,0,1,0,1
 roman-number,it.unipd.mtss,InvalidLetterException,0,11,0,0,0,2,0,1,0,1
-roman-number,it.unipd.mtss,RomanPrinter,8,291,1,9,2,22,2,7,1,3
+roman-number,it.unipd.mtss,RomanPrinter,7,296,0,10,3,23,2,8,2,3

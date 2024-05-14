@@ -203,12 +203,12 @@ public class RomanPrinterTest {
     }
 
     @Test(expected = InvalidLetterException.class)
-    public void testNumberAbove4999() throws NumberBelowZeroException,
+    public void testInvalidLetter() throws NumberBelowZeroException,
             NumberOverOneThousand,
             InvalidLetterException {
         String stringa_fallita ="M";
 
-        RomanPrinter.print(stringa_fallita);
+        RomanPrinter.PrintRomanString(stringa_fallita);
     }
 
 

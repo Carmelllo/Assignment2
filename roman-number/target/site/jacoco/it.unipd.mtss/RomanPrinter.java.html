@@ -69,20 +69,25 @@ import java.util.HashMap;
 <span class="fc" id="L69">        return printAsciiArt(IntegerToRoman.convert(num));</span>
     }
 
+    public static void PrintRomanString(String romanNumber)
+            throws InvalidLetterException{
+<span class="nc" id="L74">        RomanPrinter.printAsciiArt(romanNumber);</span>
+<span class="nc" id="L75">    }</span>
+
     private static String printAsciiArt(String romanNumber)
             throws InvalidLetterException
     {
-<span class="fc bfc" id="L75" title="All 2 branches covered.">        if (romanNumber.isEmpty()) {</span>
-<span class="fc" id="L76">            return &quot;&quot;;</span>
+<span class="fc bfc" id="L80" title="All 2 branches covered.">        if (romanNumber.isEmpty()) {</span>
+<span class="fc" id="L81">            return &quot;&quot;;</span>
         }
-<span class="fc bfc" id="L78" title="All 2 branches covered.">        for (int i = 0; i &lt; romanNumber.length(); i++) {</span>
+<span class="fc bfc" id="L83" title="All 2 branches covered.">        for (int i = 0; i &lt; romanNumber.length(); i++) {</span>
             // controlla la validita' della sringa
             // di Lettere di numeri romani
             // carattere per carattere
-<span class="fc" id="L82">            char c = romanNumber.charAt(i);</span>
-<span class="pc bpc" id="L83" title="1 of 2 branches missed.">            if (!(Arrays.asList('D','C','L','X','V','I').contains(c)))</span>
+<span class="fc" id="L87">            char c = romanNumber.charAt(i);</span>
+<span class="fc bfc" id="L88" title="All 2 branches covered.">            if (!(Arrays.asList('D','C','L','X','V','I').contains(c)))</span>
             {
-<span class="nc" id="L85">                throw new InvalidLetterException(c);</span>
+<span class="fc" id="L90">                throw new InvalidLetterException(c);</span>
             }
         }
 
@@ -90,14 +95,14 @@ import java.util.HashMap;
         // prende la prima riga di asciart per ogni lettera
         // del numero romano intero e la concatena,
         // poi si passa alla seconda riga e cosi via fino alla sesta
-<span class="fc" id="L93">        StringBuilder asciiArt = new StringBuilder();</span>
-<span class="fc bfc" id="L94" title="All 2 branches covered.">        for (int i = 0; i &lt; 6; i++) {</span>
-<span class="fc bfc" id="L95" title="All 2 branches covered.">            for (int j = 0; j &lt; romanNumber.length(); j++) {</span>
-<span class="fc" id="L96">                asciiArt.append(roman_number_map.get(romanNumber.charAt(j))[i]);</span>
+<span class="fc" id="L98">        StringBuilder asciiArt = new StringBuilder();</span>
+<span class="fc bfc" id="L99" title="All 2 branches covered.">        for (int i = 0; i &lt; 6; i++) {</span>
+<span class="fc bfc" id="L100" title="All 2 branches covered.">            for (int j = 0; j &lt; romanNumber.length(); j++) {</span>
+<span class="fc" id="L101">                asciiArt.append(roman_number_map.get(romanNumber.charAt(j))[i]);</span>
             }
-<span class="fc" id="L98">            asciiArt.append('\n');</span>
+<span class="fc" id="L103">            asciiArt.append('\n');</span>
         }
-<span class="fc" id="L100">        return asciiArt.toString();</span>
+<span class="fc" id="L105">        return asciiArt.toString();</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

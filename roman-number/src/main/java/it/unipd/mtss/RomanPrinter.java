@@ -69,6 +69,11 @@ public class RomanPrinter {
         return printAsciiArt(IntegerToRoman.convert(num));
     }
 
+    public static void PrintRomanString(String romanNumber)
+            throws InvalidLetterException{
+        RomanPrinter.printAsciiArt(romanNumber);
+    }
+
     private static String printAsciiArt(String romanNumber)
             throws InvalidLetterException
     {
