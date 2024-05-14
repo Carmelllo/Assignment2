@@ -9,6 +9,7 @@ import org.junit.rules.Timeout;
 public class IntegerToRomanTest {
 
     @Rule
+    //Performance Test
     public Timeout globalTimeout = Timeout.seconds(10);
 
     @Test

@@ -23,6 +23,7 @@ public class ConverterTest {
     }
 
     @Rule
+    //Performance Test
     public Timeout globalTimeout = Timeout.seconds(10);
 
     @Parameters
