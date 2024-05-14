@@ -202,7 +202,14 @@ public class RomanPrinterTest {
         assertEquals(expected, ascii_art_zero);
     }
 
+    @Test(expected = InvalidLetterException.class)
+    public void testNumberAbove4999() throws NumberBelowZeroException,
+            NumberOverOneThousand,
+            InvalidLetterException {
+        String stringa_fallita ="M";
 
+        RomanPrinter.print(stringa_fallita);
+    }
 
 
 
